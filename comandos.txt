@@ -1,0 +1,3 @@
+Iniciar el dev-server: npm start
+Detener el dev-server: /F /IM node.exe
+Verificar que no hayan proceso de node corriendo (windows): /FI "IMAGENAME eq node.exe"
