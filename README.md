@@ -10,7 +10,6 @@ Además de ser las últimas herramientas y prácticas, las tecnologías implemen
 - **Babel** — 7.6.0 con sintaxis ES6
 - **Webpack**  — 4.39.3 Recarga la página, divide el código, optimiza la compilación
 - **Lint** — 6.3.0 ESlint
-- **Redux with Redux Thunk** — 4.0.4 para el manejo de las solicitudes asíncronas
 - **img-loader y url-loader** — 3.0.1 y 2.1.0 respectivamente
 
 ## Instalación
