@@ -1,49 +1,79 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import '../styles/style.css';
 
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-`;
+class Navbar extends React.Component{
+    render()
+    {
+        return (
+            <nav className="navbar">
+                <div className="navContent">
+                    <div className="navLogo" />
+                    <div className="navTopMenu">
+                        <a>Home</a>
+                        <a>Download</a>
+                    </div>
+                    <a>English</a>
+                </div>
+            </nav>
+        )
+    }
+}
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 500px;
-    height: 40%;
-`;
+class InitialScreen extends React.Component{
+    render()
+    {
+        return (
+            <div className="firstScreen">
+                <img />
+                <div className="firstScreenBanner">
+                    <h2 className="title">
+                        GET ON QQ
+                        <br />
+                        GET ON THE WORLD
+                    </h2>
+                    <h4>
+                        Overcome language barriers with a better message
+                    </h4>
+                    <Button position="buttonEnd"/>
+                </div>
 
-const Title = styled.h1`
-    color: black;
-    font-size: 2.5rem;
-    font-weight: 700;
-`;
+                <div className="firstScreenScroll">
+                    <p>Scroll Down</p>
+                    <i className="firstScreenMore"></i>
+                    <i className="firstScreenMore"></i>
+                    <i className="firstScreenMore"></i>
+                </div>
+            </div>
+        )
+    }
+}
 
-const Paragraph = styled.p`
-    color: black;
-    font-size: 1rem;
-`;
+class Button extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
 
-const Link = styled.a`
-    color: #00a8e8;
-`;
+    render()
+    {
+        return(
+            <div className={this.props.position}>
+                <div className="button">
+                    <a>
+                        Download
+                    </a>
+                </div>
+            </div>
+        )
+    }
+}
 
 const App = () => (
-    <Container>
-        <Wrapper>
-            <Title>
-                QQ
-            </Title>
-            <p>¡El proyecto fue compilado con exitooo!</p>
-            <p>Hecho por Oscar Juárez :)</p>
-        </Wrapper>
-    </Container>
+    <div>
+        <Navbar />
+        <InitialScreen />
+    </div>
 );
 
 export default App;
