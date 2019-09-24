@@ -21,6 +21,29 @@ a {
     font-weight: 300;
 }
 
+.subtitle {
+    padding-top: 8%;
+    padding-bottom: .2em;
+    font-family: 'Raleway', 'arial', 'microsoft yahei';
+    font-weight: 300;
+    font-size: 450%;
+}
+
+.subtitle span:first-child {
+    color: #3D444C;
+}
+
+.subtitle span:nth-child(2) {
+    color: #4688EB;
+}
+
+.paragraph {
+    font-family: 'Montserrat', 'arial', 'microsoft yahei';
+    font-size: 1.2em;
+    line-height: 1.75em;
+    color: #666;
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -176,4 +199,51 @@ a {
 .button a {
     color: #fff;
     font-size: 1.2em;
+}
+
+.secondScreen {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 90em;
+    background-color: #fff;
+    text-align: center;
+}
+
+.secondScreenIphone {
+    text-align: center;
+    margin-top: 5em;
+    height: 62em;
+}
+
+.flyImgSpanL1 {
+    position: absolute;
+    pointer-events: none;
+    display: block;
+}
+
+.flyImg {
+    position: absolute;
+    height: 100%;
+    vertical-align: bottom;
+    left: 0;
+}
+
+.thirdScreen {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    top: 282.5%;
+    width: 100%;
+    height: 100%;
+    background-color: #e5e7e9;
+}
+
+.thirdScreenIphone {
+    height: 115%;
+}
+
+.thirdScreenContent {
+    margin-top: 8em;
+    margin-left: -5em;
 }

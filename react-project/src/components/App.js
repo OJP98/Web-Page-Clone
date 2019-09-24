@@ -69,10 +69,65 @@ class Button extends React.Component {
     }
 }
 
+class Multicommunication extends React.Component {
+
+    render()
+    {
+        const iphoneImg = require('..\\..\\resources\\images\\mobile1iphone.jpg');
+        const layer1 = require('..\\..\\resources\\images\\mobile1layer1.png');
+        return(
+            <div className="secondScreen">
+                <h3 className="subtitle">
+                    <span>Multi</span>
+                    <span>communication</span>
+                </h3>
+                <p className="paragraph">
+                    Video calls, voice messages, texting with heaps of fun emoticons. <br />
+                    QQ makes sharing moments and memories much easier... <br />
+                    The fun is always on with 100+ million online users at any time.
+                </p>
+                <img className="secondScreenIphone" src={iphoneImg}/>
+                <span className="flyImgSpanL1">
+                    <img src={layer1} className="flyImg" />
+                </span>
+            </div>
+        )
+    }
+}
+
+
+class LiveTranslation extends React.Component {
+    render() {
+        const iphoneImg = require('..\\..\\resources\\images\\mobile2iphoneen.png');
+        const languages = require('..\\..\\resources\\images\\mobile2support1033.png');
+        return (
+            <div className="thirdScreen">
+                <img src={iphoneImg} className="thirdScreenIphone"/>
+                <div className="thirdScreenContent">
+                    <h3 className="subtitle">
+                        <span>Live</span>
+                        <span> translation</span>
+                    </h3>
+                    <p className="paragraph">
+                        QQ comes with a built-in translator for all your chats. <br />
+                        The automatic translation will sort your problems out <br />
+                        when you need to overcome cultural distances.
+                    </p>
+                    <br />
+                    <br />
+                    <img src={languages}/>
+                </div>
+            </div>
+        )
+    }
+}
+
 const App = () => (
     <div>
         <Navbar />
         <InitialScreen />
+        <Multicommunication />
+        <LiveTranslation />
     </div>
 );
 
