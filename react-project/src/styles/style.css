@@ -16,6 +16,9 @@ a {
     font-size: .9em;
 }
 
+
+/* COMPONENTES GENERALES */
+
 .title {
     font-family: 'Raleway', 'arial', 'microsoft yahei';
     font-weight: 300;
@@ -43,6 +46,44 @@ a {
     line-height: 1.75em;
     color: #666;
 }
+
+.buttonEnd {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    /* padding-bottom: 2.2%; */
+}
+
+.buttonCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: .2em;
+    padding-right: .2em;
+    height: 70px;
+    width: 235px;
+    border-radius: 5px;
+    background-color: #4292FF;
+    box-shadow: 0 2px #256dcf;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button a {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+
+/* NAVIGATION BAR */
 
 .navbar {
     position: sticky;
@@ -92,6 +133,9 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+
+/* INICIO DE PRIMERA PANTALLA */
 
 .firstScreen {
     position: fixed;
@@ -166,40 +210,8 @@ a {
     transform: rotate(45deg);
 }
 
-.buttonEnd {
-    display: flex;
-    align-self: flex-end;
-    justify-content: center;
-    /* padding-bottom: 2.2%; */
-}
 
-.buttonCenter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: .2em;
-    padding-right: .2em;
-    height: 70px;
-    width: 235px;
-    border-radius: 5px;
-    background-color: #4292FF;
-    box-shadow: 0 2px #256dcf;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.button a {
-    color: #fff;
-    font-size: 1.2em;
-}
+/* INICIO DE SEGUNDA PANTALLA */
 
 .secondScreen {
     position: absolute;
@@ -229,6 +241,9 @@ a {
     left: 0;
 }
 
+
+/* INICIO DE TERCERA PANTALLA */
+
 .thirdScreen {
     position: absolute;
     display: flex;
@@ -246,4 +261,54 @@ a {
 .thirdScreenContent {
     margin-top: 8em;
     margin-left: -5em;
+}
+
+
+/* INICIO DE CUARTA PANTALLA */
+
+.fourthScreen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 382.5%;
+    width: 100%;
+    height: 660px;
+    background-color: black;
+}
+
+.fourthScreenContent {
+    color: #fff;
+    text-align: center;
+}
+
+
+/* INICIO DE QUINTA PANTALLA */
+
+.fifthScreen {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    top: 469%;
+    width: 100%;
+    height: 87%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.iconsDiv {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.icon {
+    /* margin: 0 -68px; */
+    margin: 0 55px;
+    transition: all 1s ease 0s;
+    display: inline-block;
+    width: 134px;
+    height: 134px;
+    background: url(..\\..\\resources\\images\\mobile4icons.png) no-repeat;
 }

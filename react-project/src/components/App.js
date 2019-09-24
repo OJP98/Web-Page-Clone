@@ -2,6 +2,43 @@ import React from 'react';
 // import styled from 'styled-components';
 import '../styles/style.css';
 
+class Button extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    render() {
+        return (
+            <div className={this.props.position}>
+                <div className="button">
+                    <a>
+                        Download
+                    </a>
+                </div>
+            </div>
+        )
+    }
+}
+
+class AnimatedIcon extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    render() {
+
+        const style = {
+            backgroundPosition: `${this.props.position}`,
+        }
+
+        return (
+            <i className="icon" style={style} />
+        )
+    }
+}
+
 class Navbar extends React.Component{
     render()
     {
@@ -49,25 +86,6 @@ class InitialScreen extends React.Component{
     }
 }
 
-class Button extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
-    render()
-    {
-        return(
-            <div className={this.props.position}>
-                <div className="button">
-                    <a>
-                        Download
-                    </a>
-                </div>
-            </div>
-        )
-    }
-}
 
 class Multicommunication extends React.Component {
 
@@ -122,12 +140,60 @@ class LiveTranslation extends React.Component {
     }
 }
 
+
+class Video extends React.Component {
+    render() {
+
+        // const video = require('..\\..\\resources\\videos\\video.mp4');
+        const pstyle = {color: '#fff'}
+        return (
+            <div className="fourthScreen">
+                <div className="fourthScreenContent">
+                    <h3 className="subtitle">Your global Messenger</h3>
+                    <p className="paragraph" style={pstyle}>
+                    The most popular personal communications app in history: <br/>
+                    over 1,000,000,000 registered users across 80+ countries.</p>
+                </div>
+            </div>
+        )
+
+    }
+}
+
+
+class FindFriends extends React.Component {
+    render() {
+
+        return (
+            <div className="fifthScreen">
+                <h3 className="subtitle">
+                    <span>Find friends</span>
+                    <span> online</span>
+                </h3>
+                <p className="paragraph">
+                    Find and add friends from your phone contacts or link third party accounts. <br />
+                    Use the location-based discovery functions to find QQ users in your surroundings and make new friends.
+                </p>
+                <div className="iconsDiv">
+                    <AnimatedIcon position="0 0"/>
+                    <AnimatedIcon position="0 -140px"/>
+                    <AnimatedIcon position="0 -280px"/>
+                </div>
+            </div>
+        )
+
+    }
+}
+
+
 const App = () => (
     <div>
         <Navbar />
         <InitialScreen />
         <Multicommunication />
         <LiveTranslation />
+        <Video />
+        <FindFriends />
     </div>
 );
 
