@@ -1,5 +1,4 @@
-module.exports = [
-    {
+module.exports = [{
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -27,8 +26,7 @@ module.exports = [
     },
     {
         test: /\.css$/,
-        use: [
-            {
+        use: [{
                 loader: 'style-loader',
             },
             {
@@ -38,8 +36,7 @@ module.exports = [
     },
     {
         test: /\.s(a|c)ss$/,
-        use: [
-            {
+        use: [{
                 loader: 'style-loader',
             },
             {
@@ -58,4 +55,10 @@ module.exports = [
             },
         ],
     },
+    {
+        test: /\.(mov|mp4)$/,
+        use: [{
+            loader: 'file-loader?name=resources/videos/[name].[ext]',
+        }]
+    }
 ];

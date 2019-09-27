@@ -144,8 +144,9 @@ class LiveTranslation extends React.Component {
 class Video extends React.Component {
     render() {
 
-        // const video = require('..\\..\\resources\\videos\\video.mp4');
+        const video = require('..\\..\\resources\\videos\\video.mp4');
         const pstyle = {color: '#fff'}
+
         return (
             <div className="fourthScreen">
                 <div className="fourthScreenContent">
@@ -153,6 +154,7 @@ class Video extends React.Component {
                     <p className="paragraph" style={pstyle}>
                     The most popular personal communications app in history: <br/>
                     over 1,000,000,000 registered users across 80+ countries.</p>
+                    <video src={video} type="video/mp4" autoPlay controls />
                 </div>
             </div>
         )
@@ -181,19 +183,50 @@ class FindFriends extends React.Component {
                 </div>
             </div>
         )
+    }
+}
 
+
+class Share extends React.Component {
+
+    render() {
+
+        const textStyle = { color: '#fff' }
+        const iphoneImg = require('..\\..\\resources\\images\\mobile5iphone.png');
+        const iphoneContent = require('..\\..\\resources\\images\\mobile5iphonecontent.jpg');
+        const iphoneTopBar = require('..\\..\\resources\\images\\mobile5iphonetopbar.png');
+        return (
+            <div className="sixthScreen">
+                <div className="sixthScreenContent">
+                    <h3 className="subtitle" style={textStyle}>
+                        Share what matters
+                    </h3>
+                    <p className="paragraph" style={textStyle}>
+                        Don't keep your best moments for yourself: sharing is caring, <br />
+                        and Qzone makes it easier to share multimedia content with people you care about.
+                    </p>
+                </div>
+
+                <img className="sixthScreenIphone" src={iphoneImg}></img>
+                <div className="scrollingIphone">
+                    <img src={iphoneTopBar}></img>
+                    <img src={iphoneContent}></img>
+                </div>
+            </div>
+        )
     }
 }
 
 
 const App = () => (
-    <div>
+    <div className="App">
         <Navbar />
         <InitialScreen />
         <Multicommunication />
         <LiveTranslation />
         <Video />
         <FindFriends />
+        <Share />
     </div>
 );
 

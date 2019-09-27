@@ -16,6 +16,13 @@ a {
     font-size: .9em;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* COMPONENTES GENERALES */
 
@@ -86,7 +93,10 @@ a {
 /* NAVIGATION BAR */
 
 .navbar {
-    position: sticky;
+    /* position: sticky; */
+    position: fixed;
+    display: flex;
+    width: 100%;
     top: 0;
     background-color: transparent;
     height: 5em;
@@ -94,11 +104,12 @@ a {
 }
 
 .navContent {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     margin-left: 7%;
     margin-right: 9%;
-    justify-content: space-around;
     height: 5em;
 }
 
@@ -138,12 +149,12 @@ a {
 /* INICIO DE PRIMERA PANTALLA */
 
 .firstScreen {
-    position: fixed;
+    height: 48em;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #07080B;
+    background: url('../../resources/images/topbanner.jpg') no-repeat;
 }
 
 .firstScreen img {
@@ -214,8 +225,6 @@ a {
 /* INICIO DE SEGUNDA PANTALLA */
 
 .secondScreen {
-    position: absolute;
-    top: 100%;
     width: 100%;
     height: 90em;
     background-color: #fff;
@@ -245,17 +254,15 @@ a {
 /* INICIO DE TERCERA PANTALLA */
 
 .thirdScreen {
-    position: absolute;
     display: flex;
     justify-content: space-evenly;
-    top: 282.5%;
     width: 100%;
     height: 100%;
     background-color: #e5e7e9;
 }
 
 .thirdScreenIphone {
-    height: 115%;
+    height: 50%;
 }
 
 .thirdScreenContent {
@@ -267,11 +274,9 @@ a {
 /* INICIO DE CUARTA PANTALLA */
 
 .fourthScreen {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 382.5%;
     width: 100%;
     height: 660px;
     background-color: black;
@@ -286,14 +291,12 @@ a {
 /* INICIO DE QUINTA PANTALLA */
 
 .fifthScreen {
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
-    top: 469%;
     width: 100%;
-    height: 87%;
+    height: 40em;
     background-color: #fff;
     text-align: center;
 }
@@ -311,4 +314,38 @@ a {
     width: 134px;
     height: 134px;
     background: url(..\\..\\resources\\images\\mobile4icons.png) no-repeat;
+}
+
+
+/* INICIO DE LA SEXTA PANTALLA */
+
+.sixthScreen {
+    background: url(..\\..\\resources\\images\\mobile5bg.jpg) no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 140%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sixthScreenIphone {
+    margin-top: 4%;
+}
+
+.scrollingIphone {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    margin-top: -36.5em;
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.scrollingIphone::-webkit-scrollbar {
+    display: none;
 }
