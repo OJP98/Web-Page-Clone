@@ -55,10 +55,10 @@ a {
 }
 
 .buttonEnd {
+    margin-top: 20em;
     display: flex;
-    align-self: flex-end;
+    align-self: center;
     justify-content: center;
-    /* padding-bottom: 2.2%; */
 }
 
 .buttonCenter {
@@ -68,7 +68,6 @@ a {
 }
 
 .button {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,9 +172,9 @@ a {
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: auto;
+    align-items: center;
     width: 9em;
-    height: 20em;
+    height: 24em;
     top: 35%;
     width: 100%;
     text-align: center;
@@ -194,7 +193,7 @@ a {
     display: flex;
     align-self: center;
     position: absolute;
-    margin-top: 1.2%;
+    margin-top: -1%;
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 1.3em;
@@ -313,14 +312,12 @@ a {
     display: inline-block;
     width: 134px;
     height: 134px;
-    background: url(..\\..\\resources\\images\\mobile4icons.png) no-repeat;
 }
 
 
 /* INICIO DE LA SEXTA PANTALLA */
 
 .sixthScreen {
-    background: url(..\\..\\resources\\images\\mobile5bg.jpg) no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,6 +326,7 @@ a {
     height: 140%;
     text-align: center;
     overflow: hidden;
+    background-image: url('../../resources/images/mobile5bg.jpg');
 }
 
 .sixthScreenIphone {
@@ -348,4 +346,125 @@ a {
 
 .scrollingIphone::-webkit-scrollbar {
     display: none;
+}
+
+
+/* INICIO DE LA ÚLTIMA PANTALLA */
+
+.finalScreen {
+    height: 55em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(to bottom, #f2f2f2, #ebebeb);
+    border-bottom: 8em solid #fff;
+}
+
+.mobile6img {
+    margin-top: 12%;
+    height: 50em;
+    width: 60em;
+}
+
+.tryNow {
+    height: 27em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+/* INICIO DEL FOOTER */
+
+.footer {
+    height: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #353C49;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContent a {
+    text-align: center;
+    color: #959ead;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-transition: color .25s;
+    margin: 3em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.footerContent a:hover {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footerShare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-icons {
+    margin: 20px 20px 0 20px;
+    width: 30px;
+    height: 30px;
+    background: url('../../resources/images/icons-share.png') no-repeat;
+    cursor: pointer;
+}
+
+.share-icons-fb {
+    background-position: 0 -30px;
+}
+
+.share-icons-tw {
+    background-position: -30px -30px;
+}
+
+.share-icons-wei {
+    background-position: -60px -30px;
+}
+
+.share-icons-wb {
+    background-position: -90px -30px;
+}
+
+.share-icons-fb:hover {
+    background-position: 0 0;
+}
+
+.share-icons-tw:hover {
+    background-position: -30px 0;
+}
+
+.share-icons-wei:hover {
+    background-position: -60px 0;
+}
+
+.share-icons-wb:hover {
+    background-position: -90px 0;
+}
+
+.copyright {
+    font-family: 'Raleway', 'arial', 'microsoft yahei';
+    font-weight: 300;
+    color: #959ead;
+    font-size: 0.7em;
+    margin-top: 2em;
 }

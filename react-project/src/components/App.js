@@ -1,6 +1,7 @@
 import React from 'react';
 // import styled from 'styled-components';
 import '../styles/style.css';
+import './Iphones.jsx'
 
 class Button extends React.Component {
     constructor(props) {
@@ -72,7 +73,7 @@ class InitialScreen extends React.Component{
                     <h4>
                         Overcome language barriers with a better message
                     </h4>
-                    <Button position="buttonEnd"/>
+                    <Button position="buttonEnd" />
                 </div>
 
                 <div className="firstScreenScroll">
@@ -207,11 +208,67 @@ class Share extends React.Component {
                     </p>
                 </div>
 
-                <img className="sixthScreenIphone" src={iphoneImg}></img>
+                <img className="sixthScreenIphone" src={iphoneImg} />
                 <div className="scrollingIphone">
-                    <img src={iphoneTopBar}></img>
-                    <img src={iphoneContent}></img>
+                    <img src={iphoneTopBar} />
+                    <img src={iphoneContent} />
                 </div>
+            </div>
+        )
+    }
+}
+
+class GoTo extends React.Component {
+    render() {
+        const image = require('..\\..\\resources\\images\\mobile6front.png');
+        return (
+            <div className="finalScreen">
+                <h3 className="subtitle">
+                    <span>Everywhere</span>
+                    <span> you go</span>
+                </h3>
+                <p className="paragraph">
+                    QQ is available for Android, iOS/iPhone, Win, Mac, Web... and offers multi-device login <br />
+                    and cross-platform integration.
+                </p>
+                <img className="mobile6img" src={image} />
+            </div>
+        );
+    }
+}
+
+
+class TryNow extends React.Component {
+    render() {
+        return (
+            <div className="tryNow">
+                <h3 className="subtitle">Get on QQ, try it now</h3>
+                <br />
+                <br />
+                <br />
+                <Button />
+            </div>
+        )
+    }
+}
+
+class Footer extends React.Component {
+    render() {
+        return (
+            <div className="footer">
+                <div className="footerContent">
+                    <a>FeedBack</a>
+                    <a>About Us</a>
+                    <a>License</a>
+                    <a>Privacy Policy</a>
+                </div>
+                <div className="footerShare">
+                    <a className="share-icons share-icons-fb"/>
+                    <a className="share-icons share-icons-tw"/>
+                    <a className="share-icons share-icons-wei"/>
+                    <a className="share-icons share-icons-wb"/>
+                </div>
+                <h4 className="copyright">Copyright © 1998 - 2018 Tencent. All Rights Reserved</h4>
             </div>
         )
     }
@@ -227,6 +284,9 @@ const App = () => (
         <Video />
         <FindFriends />
         <Share />
+        <GoTo />
+        <TryNow />
+        <Footer />
     </div>
 );
 
