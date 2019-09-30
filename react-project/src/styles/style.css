@@ -10,7 +10,6 @@ h5 {
 }
 
 a {
-    color: #fff;
     text-decoration: none;
     font-family: 'Montserrat';
     font-size: .9em;
@@ -91,15 +90,30 @@ a {
 
 /* NAVIGATION BAR */
 
-.navbar {
+.navbarPrimary {
     /* position: sticky; */
+    color: #fff;
     position: fixed;
     display: flex;
     width: 100%;
     top: 0;
     background-color: transparent;
     height: 5em;
-    z-index: 5;
+    z-index: 999;
+    transition: 300ms;
+}
+
+.navbarSecondary {
+    color: black;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    height: 5em;
+    z-index: 999;
+    transition: 300ms;
 }
 
 .navContent {
@@ -112,6 +126,14 @@ a {
     height: 5em;
 }
 
+.navColor1 {
+    color: #fff;
+}
+
+.navColor2 {
+    color: black;
+}
+
 .navContent a:hover {
     color: #408CF3;
     text-decoration: none
@@ -122,9 +144,17 @@ a {
     top: 0px;
     width: 258px;
     height: 57px;
-    background: url(../../resources/images/topbarlogowhite.png) no-repeat;
     text-indent: -99em;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.logo1 {
+    background: url(../../resources/images/topbarlogowhite.png) no-repeat;
+}
+
+.logo2 {
+    background: url(../../resources/images/topbarlogo.png) no-repeat;
 }
 
 .navTopMenu {
@@ -132,6 +162,7 @@ a {
     text-decoration: none;
     align-content: center;
     padding-right: 12em;
+    cursor: pointer;
 }
 
 .navTopMenu a {
@@ -140,8 +171,8 @@ a {
     padding-right: 2em;
     padding-top: 3px;
     line-height: 73px;
-    color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -153,11 +184,16 @@ a {
     bottom: 0;
     right: 0;
     left: 0;
-    background: url('../../resources/images/topbanner.jpg') no-repeat;
+    z-index: 0;
+    background-color: black;
 }
 
-.firstScreen img {
+.firstScreenImg {
     background: url('../../resources/images/topbanner.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
     max-height: 100%;
@@ -165,7 +201,6 @@ a {
     padding: 0;
     background-size: 100% 100%;
     top: 0px;
-    opacity: 1;
 }
 
 .firstScreenBanner {
@@ -201,7 +236,7 @@ a {
 
 .firstScreenScroll {
     position: relative;
-    bottom: 8%;
+    bottom: 4em;
     text-align: center;
     color: #C4C4C4;
     font-size: 16px;
@@ -228,6 +263,7 @@ a {
     height: 90em;
     background-color: #fff;
     text-align: center;
+    z-index: 0;
 }
 
 .secondScreenIphone {
@@ -312,6 +348,7 @@ a {
     display: inline-block;
     width: 134px;
     height: 134px;
+    background-image: url('../../resources/images/mobile4icons.png');
 }
 
 
@@ -403,7 +440,7 @@ a {
     color: #959ead;
     text-decoration: none;
     white-space: nowrap;
-    -webkit-transition: color .25s;
+    transition: color .25s;
     margin: 3em;
     cursor: pointer;
     font-weight: 600;

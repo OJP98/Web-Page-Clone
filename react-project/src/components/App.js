@@ -1,7 +1,6 @@
 import React from 'react';
 // import styled from 'styled-components';
 import '../styles/style.css';
-import './Iphones.jsx'
 
 class Button extends React.Component {
     constructor(props) {
@@ -41,12 +40,19 @@ class AnimatedIcon extends React.Component {
 }
 
 class Navbar extends React.Component{
+    constructor(props) {
+        super(props)
+    }
+
     render()
     {
+        const contentClass = "navContent " + this.props.navbarContent;
+        const logoClass = "navLogo " + this.props.navbarLogo;
+
         return (
-            <nav className="navbar">
-                <div className="navContent">
-                    <div className="navLogo" />
+            <nav className={this.props.navbarStyle}>
+                <div className={contentClass}>
+                    <div className={logoClass} />
                     <div className="navTopMenu">
                         <a>Home</a>
                         <a>Download</a>
@@ -59,28 +65,34 @@ class Navbar extends React.Component{
 }
 
 class InitialScreen extends React.Component{
+    constructor(props) {
+        super(props)
+    }
+
     render()
     {
         return (
             <div className="firstScreen">
-                <img />
-                <div className="firstScreenBanner">
-                    <h2 className="title">
-                        GET ON QQ
-                        <br />
-                        GET ON THE WORLD
-                    </h2>
-                    <h4>
-                        Overcome language barriers with a better message
-                    </h4>
-                    <Button position="buttonEnd" />
-                </div>
+                <img className="firstScreenImg" style={{ opacity: this.props.opacity }}/>
+                <div className="firstScreenContent" style={{ opacity: this.props.opacity }}>
+                    <div className="firstScreenBanner">
+                        <h2 className="title">
+                            GET ON QQ
+                            <br />
+                            GET ON THE WORLD
+                        </h2>
+                        <h4>
+                            Overcome language barriers with a better message
+                        </h4>
+                        <Button position="buttonEnd" />
+                    </div>
 
-                <div className="firstScreenScroll">
-                    <p>Scroll Down</p>
-                    <i className="firstScreenMore"></i>
-                    <i className="firstScreenMore"></i>
-                    <i className="firstScreenMore"></i>
+                    <div className="firstScreenScroll">
+                        <p>Scroll Down</p>
+                        <i className="firstScreenMore"></i>
+                        <i className="firstScreenMore"></i>
+                        <i className="firstScreenMore"></i>
+                    </div>
                 </div>
             </div>
         )
@@ -275,19 +287,51 @@ class Footer extends React.Component {
 }
 
 
-const App = () => (
-    <div className="App">
-        <Navbar />
-        <InitialScreen />
-        <Multicommunication />
-        <LiveTranslation />
-        <Video />
-        <FindFriends />
-        <Share />
-        <GoTo />
-        <TryNow />
-        <Footer />
-    </div>
-);
+class App extends React.Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            navbarStyle: 'navbarPrimary',
+            navbarContent: 'navColor1',
+            navbarLogo: 'logo1',
+            opacity: 1,
+        }
+    }
+
+    componentDidMount() {
+        window.onscroll = () => {
+
+            const opacity = 1 - (window.pageYOffset / 650);
+
+            if (window.pageYOffset > 700){
+                this.setState({ navbarStyle: 'navbarSecondary', navbarContent: 'navColor2', navbarLogo: 'logo2' })
+            }
+            else
+            {
+                this.setState({ navbarStyle: 'navbarPrimary', navbarContent: 'navColor1', navbarLogo: 'logo1'})
+                this.setState({ opacity: opacity });
+            }
+        }
+    }
+
+    render() {
+        return(
+            <div className="App">
+                <Navbar navbarStyle={this.state.navbarStyle} navbarContent={this.state.navbarContent} navbarLogo={this.state.navbarLogo} />
+                <InitialScreen opacity={this.state.opacity}/>
+                <Multicommunication />
+                <LiveTranslation />
+                <Video />
+                <FindFriends />
+                <Share />
+                <GoTo />
+                <TryNow />
+                <Footer />
+            </div>
+        )
+    }
+}
 
 export default App;
