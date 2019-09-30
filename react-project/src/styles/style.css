@@ -342,8 +342,6 @@ a {
 }
 
 .icon {
-    /* margin: 0 -68px; */
-    margin: 0 55px;
     transition: all 1s ease 0s;
     display: inline-block;
     width: 134px;
@@ -389,7 +387,7 @@ a {
 /* INICIO DE LA ÚLTIMA PANTALLA */
 
 .finalScreen {
-    height: 55em;
+    height: 50em;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -401,7 +399,7 @@ a {
 }
 
 .mobile6img {
-    margin-top: 12%;
+    margin-top: 4%;
     height: 50em;
     width: 60em;
 }

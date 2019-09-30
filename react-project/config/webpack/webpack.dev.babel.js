@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: paths.outputPath,
-        chunkFilename: '[name].js'
+        chunkFilename: '[name].js',
     },
     performance: {
         hints: 'warning',

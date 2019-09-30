@@ -24,13 +24,16 @@ class Button extends React.Component {
 class AnimatedIcon extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
     }
 
     render() {
 
+        let marginValue = 0;
+        this.props.animation != "play" ? marginValue = -68 : marginValue = 55
+
         const style = {
             backgroundPosition: `${this.props.position}`,
+            margin: `0 ${marginValue}px`
         }
 
         return (
@@ -177,8 +180,11 @@ class Video extends React.Component {
 
 
 class FindFriends extends React.Component {
-    render() {
+    constructor(props) {
+        super(props)
+    }
 
+    render() {
         return (
             <div className="fifthScreen">
                 <h3 className="subtitle">
@@ -190,9 +196,9 @@ class FindFriends extends React.Component {
                     Use the location-based discovery functions to find QQ users in your surroundings and make new friends.
                 </p>
                 <div className="iconsDiv">
-                    <AnimatedIcon position="0 0"/>
-                    <AnimatedIcon position="0 -140px"/>
-                    <AnimatedIcon position="0 -280px"/>
+                    <AnimatedIcon position="0 0" animation={this.props.animation} />
+                    <AnimatedIcon position="0 -140px" animation={this.props.animation} />
+                    <AnimatedIcon position="0 -280px" animation={this.props.animation} />
                 </div>
             </div>
         )
@@ -233,11 +239,13 @@ class Share extends React.Component {
 class GoTo extends React.Component {
     render() {
         const image = require('..\\..\\resources\\images\\mobile6front.png');
+        const textStyle1 = { color: '#3D444C' }
+        const textStyle2 = { color: '#4688EB' }
         return (
             <div className="finalScreen">
                 <h3 className="subtitle">
-                    <span>Everywhere</span>
-                    <span> you go</span>
+                    <span style={textStyle2}>Everywhere</span>
+                    <span style={textStyle1}> you go</span>
                 </h3>
                 <p className="paragraph">
                     QQ is available for Android, iOS/iPhone, Win, Mac, Web... and offers multi-device login <br />
@@ -297,6 +305,7 @@ class App extends React.Component {
             navbarContent: 'navColor1',
             navbarLogo: 'logo1',
             opacity: 1,
+            animation: 'hold'
         }
     }
 
@@ -305,13 +314,15 @@ class App extends React.Component {
 
             const opacity = 1 - (window.pageYOffset / 650);
 
-            if (window.pageYOffset > 700){
-                this.setState({ navbarStyle: 'navbarSecondary', navbarContent: 'navColor2', navbarLogo: 'logo2' })
+            if (window.pageYOffset < 700){
+                this.setState({ navbarStyle: 'navbarPrimary', navbarContent: 'navColor1', navbarLogo: 'logo1', opacity: opacity})
+            }
+            else if (window.pageYOffset >= 3600) {
+                this.setState( {animation: 'play'} )
             }
             else
             {
-                this.setState({ navbarStyle: 'navbarPrimary', navbarContent: 'navColor1', navbarLogo: 'logo1'})
-                this.setState({ opacity: opacity });
+                this.setState({ navbarStyle: 'navbarSecondary', navbarContent: 'navColor2', navbarLogo: 'logo2' })
             }
         }
     }
@@ -324,7 +335,7 @@ class App extends React.Component {
                 <Multicommunication />
                 <LiveTranslation />
                 <Video />
-                <FindFriends />
+                <FindFriends animation={this.state.animation}/>
                 <Share />
                 <GoTo />
                 <TryNow />
