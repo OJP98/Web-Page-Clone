@@ -58,7 +58,7 @@ module.exports = [{
     {
         test: /\.(mov|mp4)$/,
         use: [{
-            loader: 'file-loader?name=resources/videos/[name].[ext]',
+            loader: 'file-loader',
         }]
     }
 ];

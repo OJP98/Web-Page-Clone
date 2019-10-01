@@ -42,6 +42,21 @@ class AnimatedIcon extends React.Component {
     }
 }
 
+class FloatingImage extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+
+        return(
+            <div className="flyImgDiv">
+                <img src={this.props.src} className="flyImg" />
+            </div>
+        )
+    }
+}
+
 class Navbar extends React.Component{
     constructor(props) {
         super(props)
@@ -92,9 +107,9 @@ class InitialScreen extends React.Component{
 
                     <div className="firstScreenScroll">
                         <p>Scroll Down</p>
-                        <i className="firstScreenMore"></i>
-                        <i className="firstScreenMore"></i>
-                        <i className="firstScreenMore"></i>
+                        <i className="firstScreenMore" />
+                        <i className="firstScreenMore" />
+                        <i className="firstScreenMore" />
                     </div>
                 </div>
             </div>
@@ -108,7 +123,7 @@ class Multicommunication extends React.Component {
     render()
     {
         const iphoneImg = require('..\\..\\resources\\images\\mobile1iphone.jpg');
-        const layer1 = require('..\\..\\resources\\images\\mobile1layer1.png');
+        const img1 = require('..\\..\\resources\\images\\img1.png');
         return(
             <div className="secondScreen">
                 <h3 className="subtitle">
@@ -121,9 +136,10 @@ class Multicommunication extends React.Component {
                     The fun is always on with 100+ million online users at any time.
                 </p>
                 <img className="secondScreenIphone" src={iphoneImg}/>
-                <span className="flyImgSpanL1">
+                {/* <span className="flyImgSpanL1">
                     <img src={layer1} className="flyImg" />
-                </span>
+                </span> */}
+                {/* <FloatingImage src={img1} /> */}
             </div>
         )
     }
@@ -160,7 +176,6 @@ class LiveTranslation extends React.Component {
 class Video extends React.Component {
     render() {
 
-        const video = require('..\\..\\resources\\videos\\video.mp4');
         const pstyle = {color: '#fff'}
 
         return (
@@ -170,7 +185,6 @@ class Video extends React.Component {
                     <p className="paragraph" style={pstyle}>
                     The most popular personal communications app in history: <br/>
                     over 1,000,000,000 registered users across 80+ countries.</p>
-                    <video src={video} type="video/mp4" autoPlay controls />
                 </div>
             </div>
         )
