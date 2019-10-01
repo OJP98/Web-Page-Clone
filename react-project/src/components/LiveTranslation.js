@@ -1,14 +1,18 @@
 import React from 'react';
+import ChatBubble from './ChatBubble';
 
 class LiveTranslation extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         const iphoneImg = require('..\\..\\resources\\images\\mobile2iphoneen.png');
         const languages = require('..\\..\\resources\\images\\mobile2support1033.png');
         return (
             <div className="thirdScreen">
                 <div className="thirdScreenIphone">
-                    <i className="chatBubble"/>
-                    <i className="chatArrow"/>
+                    <ChatBubble current={this.props.current}/>
                     <img alt="" src={iphoneImg} style={{height: '100%'}}/>
                 </div>
                 <div className="thirdScreenContent">

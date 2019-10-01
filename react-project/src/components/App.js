@@ -35,7 +35,8 @@ class App extends React.Component {
             navbarContent: 'navColor1',
             navbarLogo: 'logo1',
             opacity: 1,
-            animation: 'hold'
+            animation: 'hold',
+            currentBubble: 'japanese'
         };
     }
 
@@ -63,7 +64,7 @@ class App extends React.Component {
                 <Navbar navbarStyle={this.state.navbarStyle} navbarContent={this.state.navbarContent} navbarLogo={this.state.navbarLogo} />
                 <InitialScreen opacity={this.state.opacity}/>
                 <Multicommunication />
-                <LiveTranslation />
+                <LiveTranslation current={this.state.currentBubble} isClicked={false}/>
                 <GifScreen />
                 <FindFriends animation={this.state.animation}/>
                 <ShareScreen />

@@ -305,15 +305,26 @@ a {
     background-image: url(../../resources/images/mobile2trans1033.png);
     height: 120px;
     width: 340px;
-    background-position: 0 -300px;
     margin-top: 15em;
-    margin-left: -1em;
+    margin-left: -12em;
     border-style: none;
     cursor: pointer;
 }
 
-.chatBubble:hover {
+.japaneseLang {
+    background-position: 0 -300px;
+}
+
+.japaneseLang:hover {
     background-position: 0 -420px;
+}
+
+.englishLang {
+    background-position: 0 0;
+}
+
+.englishLang:hover {
+    background-position: 0 -220px;
 }
 
 .chatArrow {
@@ -322,6 +333,7 @@ a {
     height: 160px;
     width: 390px;
     background-position: 0 -525px;
+    margin-left: -12em;
     margin-top: 21em;
     border-style: none;
 }
