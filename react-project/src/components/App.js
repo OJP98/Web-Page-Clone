@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './Navbar'
-import Button from './Button'
 import InitialScreen from './InitialScreen'
 import Multicommunication from './Multicommuncation'
 import LiveTranslation from './LiveTranslation'
@@ -46,10 +45,10 @@ class App extends React.Component {
             const opacity = 1 - (window.pageYOffset / 650);
 
             if (window.pageYOffset < 700){
-                this.setState({ navbarStyle: 'navbarPrimary', navbarContent: 'navColor1', navbarLogo: 'logo1', opacity});
+                this.setState({ navbarStyle: 'navbarPrimary', navbarContent: 'navColor1', navbarLogo: 'logo1', opacity });
             }
             else if (window.pageYOffset >= 3600) {
-                this.setState( {animation: 'play'} );
+                this.setState({ animation: 'play' });
             }
             else
             {

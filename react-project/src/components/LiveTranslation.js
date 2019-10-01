@@ -6,7 +6,11 @@ class LiveTranslation extends React.Component {
         const languages = require('..\\..\\resources\\images\\mobile2support1033.png');
         return (
             <div className="thirdScreen">
-                <img alt="" src={iphoneImg} className="thirdScreenIphone"/>
+                <div className="thirdScreenIphone">
+                    <i className="chatBubble"/>
+                    <i className="chatArrow"/>
+                    <img alt="" src={iphoneImg} style={{height: '100%'}}/>
+                </div>
                 <div className="thirdScreenContent">
                     <h3 className="subtitle">
                         <span>Live</span>
