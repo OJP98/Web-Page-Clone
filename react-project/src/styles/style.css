@@ -414,6 +414,7 @@ a {
 }
 
 .tryNow {
+    margin-top: -2em;
     height: 27em;
     display: flex;
     flex-direction: column;
