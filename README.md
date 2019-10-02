@@ -15,7 +15,7 @@ Además de ser las últimas herramientas y prácticas, las tecnologías implemen
 ## Instalación
 
 1. Clonar este repo con el siguiente enlace: `https://github.com/OJP98/com.git`
-2. Dirigirse a la ruta de instalación: `cd Web-Page-Clone`.<br />
+2. Dirigirse a la ruta de instalación del proyecto: `cd Web-Page-Clone/react-project`.<br />
 3. Instalar las dependencias usando `npm install`.<br />
 4. Correr el comando con `npm start` y visualizar el resultado en `http://localhost:8080`.
 
